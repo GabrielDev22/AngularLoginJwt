@@ -1,0 +1,47 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Adrres</th>
+        <th scope="col">company</th>
+        <th scope="col">email</th>
+        <th scope="col">geo</th>
+        <th scope="col">name</th>
+        <th scope="col">phone</th>
+        <th scope="col">username</th>
+        <th scope="col">website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of dataMyUser; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>
+          <div *ngFor="let address of [user.address]">
+            <p>{{address.street}}</p>
+            <p>{{address.suite}}</p>
+            <p>{{address.city}}</p>
+            <p>{{address.zipcode}}</p>
+          </div>
+        </td>
+        <td>
+          <div *ngFor="let copamny of [user.company]">
+            <p>{{copamny.name}}</p>
+            <p>{{copamny.catchPhrase}}</p>
+            <p>{{copamny.bs}}</p>
+          </div>
+        </td>
+        <td>{{user.email}}</td>
+        <td>
+          <div *ngFor="let geo of [user.geo]">
+            <p>{{geo.lat}}</p>
+            <p>{{geo.lng}}</p>
+          </div>
+        </td>
+        <td>{{user.name}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.website}}</td>
+      </tr>
+    </tbody>
+  </table>
+

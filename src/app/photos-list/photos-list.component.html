@@ -1,0 +1,23 @@
+<table class="table">
+    <div *ngIf="spinnerData" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">albumId</th>
+        <th scope="col">thumbanailUrl</th>
+        <th scope="col">title</th>
+        <th scope="col">url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataPhotos; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <th scope="row">{{data.albumId}}</th>
+        <th scope="row">{{data.thumbanailUrl}}</th>
+        <th scope="row">{{data.title}}</th>
+        <img class="w-25" src={{data.url}} />
+      </tr>
+    </tbody>
+  </table>

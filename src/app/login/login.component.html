@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card w-75">
+    <div class="card-body bg-light-subtle">
+      <h5 class="card-title text-center">Login de usuario</h5>
+      <p class="card-text text-center">Para poder acceder al resto de endpoint de nuestra aplicacion es necesario que te logues primero</p>
+      <form (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" [(ngModel)]="username" name="username">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3"  [(ngModel)]="password" name="password">
+          </div>
+        </div>      
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>

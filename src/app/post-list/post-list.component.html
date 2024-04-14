@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">complet</th>
+        <th scope="col">title</th>
+        <th scope="col">userId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataPosts; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{data.body}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.userId}}</td>
+      </tr>
+    </tbody>
+  </table>
